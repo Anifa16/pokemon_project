@@ -4,6 +4,10 @@ import requests
 
 app = Flask(__name__)
 
+@app.route('/')
+def welcome():
+   return 'Hello welcome to my pokemon class built with flack'
+
 @app.route('/pokemon', methods=['GET', 'POST'])
 def pokemon():
    print(request.method)
